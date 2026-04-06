@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mecano Stras - Mécanicien à Reichstett</title>
+<meta name="description" content="Mécanicien à Reichstett. Réparation, entretien, diagnostic. Sur rendez-vous avec devis personnalisé.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#f5f7fa;color:#111}
+header{position:fixed;width:100%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.05);z-index:1000}
+nav{display:flex;justify-content:space-between;padding:20px 40px}
+nav h1{font-weight:700}
+nav a{margin-left:20px;text-decoration:none;color:#333}
+
+.hero{height:100vh;background:url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.hero h2{font-size:52px}
+.hero p{font-size:20px}
+
+.btn{background:#25D366;color:#fff;padding:15px 25px;border-radius:40px;text-decoration:none;display:inline-block;margin-top:20px}
+
+.section{padding:100px 20px;text-align:center}
+.services{display:flex;flex-wrap:wrap;justify-content:center}
+.card{background:#fff;width:260px;margin:15px;padding:25px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.06);transition:0.3s}
+.card:hover{transform:translateY(-8px)}
+
+.reviews{display:flex;flex-wrap:wrap;justify-content:center}
+.review{background:#fff;width:300px;margin:15px;padding:20px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.05)}
+
+footer{background:#0f172a;color:#fff;padding:40px;text-align:center}
+
+iframe{width:100%;height:300px;border:0;border-radius:15px}
+
+.whatsapp{position:fixed;bottom:20px;right:20px}
+
+</style>
+</head>
+
+<body>
+<header>
+<nav>
+<h1>Mecano Stras</h1>
+<div>
+<a href="#services">Services</a>
+<a href="#avis">Avis</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h2>Mécanicien à Reichstett</h2>
+<p>Réparation automobile sur rendez-vous</p>
+<a class="btn" href="https://wa.me/33600000000" target="_blank">Devis WhatsApp</a>
+</div>
+</section>
+
+<section class="section">
+<h2>Services complets</h2>
+<div class="services">
+<div class="card">Vidange & entretien</div>
+<div class="card">Freinage</div>
+<div class="card">Diagnostic électronique</div>
+<div class="card">Distribution</div>
+<div class="card">Embrayage</div>
+<div class="card">Moteur</div>
+<div class="card">Suspension</div>
+<div class="card">Climatisation</div>
+<div class="card">Échappement</div>
+</div>
+</section>
+
+<section id="avis" class="section">
+<h2>Avis clients</h2>
+<div class="reviews">
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Service rapide et pro</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Prix honnêtes, je recommande</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Très bon diagnostic</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Localisation</h2>
+<iframe src="https://maps.google.com/maps?q=Reichstett&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Sur rendez-vous uniquement</p>
+<a class="btn" href="https://wa.me/33600000000">Contacter</a>
+</section>
+
+<footer>
+<p>© Mecano Stras 2026</p>
+</footer>
+
+<a class="btn whatsapp" href="https://wa.me/33600000000">WhatsApp</a>
+
+<script>
+// animation simple scroll
+const cards = document.querySelectorAll('.card, .review');
+window.addEventListener('scroll', () => {
+cards.forEach(c => {
+const top = c.getBoundingClientRect().top;
+if(top < window.innerHeight - 50){
+c.style.opacity = 1;
+c.style.transform = 'translateY(0)';
+}
+});
+});
+
+cards.forEach(c => {
+c.style.opacity = 0;
+c.style.transform = 'translateY(40px)';
+});
+</script>
+
+</body>
+</html>
